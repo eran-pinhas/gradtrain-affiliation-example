@@ -20,7 +20,7 @@
         android:gravity="center"
         android:padding="10dp"
         android:text="@string/sample_text"
-        android:textSize="12sp"
+        android:textSize="@dimen/affiliate_bullet_fontsize"
         android:textColor="@color/affiliatesBullet" />
 
     <LinearLayout

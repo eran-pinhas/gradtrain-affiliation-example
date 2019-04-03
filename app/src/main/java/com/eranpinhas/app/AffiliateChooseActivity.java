@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -160,10 +161,12 @@ public class AffiliateChooseActivity extends AppCompatActivity implements AbsLis
             view = getLayoutInflater().inflate(R.layout.item_layout, null);
 
             ((TextView) view.findViewById(R.id.title)).setText(option.forWhat);
-            ((TextView) view.findViewById(R.id.bullet)).setText(option.youGet);
             ((TextView) view.findViewById(R.id.from)).setText(option.from);
             ((TextView) view.findViewById(R.id.because)).setText(option.because);
-
+            ((TextView) view.findViewById(R.id.bullet)).setText(option.youGet);
+            if(option.youGet.length() > 15){
+                ((TextView) view.findViewById(R.id.bullet)).setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)(getResources().getDimension(R.dimen.affiliate_bullet_fontsize)*0.7));
+            }
 
             return view;
         }
