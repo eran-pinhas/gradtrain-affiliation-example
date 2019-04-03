@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context=".AffiliateChooseActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bodyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/navbar"
+        tools:context=".AffiliateChooseActivity">
+
+        <TextView
+            android:id="@+id/affiliationLayoutTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/affiliate_textbar_maxsize"
+            android:background="@drawable/affilate_gradient_background"
+            android:gravity="center"
+            android:text="Available Offers"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ListView
+            android:id="@+id/ListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/affiliate_textbar_maxsize"
+
+            android:divider="@drawable/affiliate_list_divider"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <include
+        android:id="@+id/navbar"
+        layout="@layout/navbar"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <!--<android.support.design.widget.AppBarLayout-->
+
+        <!--android:id="@+id/appBarLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:theme="@style/AppTheme.AppBarOverlay"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent">-->
+
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <!--android:background="?attr/colorPrimary"-->
+            <!--app:popupTheme="@style/AppTheme.PopupOverlay" />-->
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+</android.support.constraint.ConstraintLayout>
