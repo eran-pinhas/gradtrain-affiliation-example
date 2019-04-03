@@ -21,7 +21,7 @@
             android:layout_height="@dimen/affiliate_textbar_maxsize"
             android:background="@drawable/affilate_gradient_background"
             android:gravity="center"
-            android:text="Available Offers"
+            android:text="@string/affiliation_choose_title"
             android:textColor="#fff"
             android:textSize="20sp"
             android:textStyle="bold"
